@@ -59,16 +59,19 @@ body {
   
   .timeline {
     margin: 150px auto;
-    max-width: 750px;
+    max-width: 350px;
     padding: 25px;
     display: grid;
-    grid-template-columns: 1fr 3px 1fr;
+    grid-template-columns: 10fr 3px 10fr;
     font-family: "Fira Sans", sans-serif;
     color: #ffffff;
+    rotate: z -90deg;
+    overflow-x: hidden; 
   }
   
   .timeline__component {
-    margin: 80px 20px 20px 20px;
+    margin: 20px 20px 200px 20px;
+    rotate: z 90deg;
   }
   
   .timeline__component--bg {
@@ -93,7 +96,7 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 15px;
+    width: 30px;
     height: 15px;
     background: #ffffff;
     border-radius: 50%;

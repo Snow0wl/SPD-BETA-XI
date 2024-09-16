@@ -235,7 +235,7 @@ span{
         content: "Civil Engineers";
     }
     34%, 44%{
-        content: "Computing Engineers";
+        content: "Computer Engineers";
     }
     45%, 55%{
         content: "Electrical Engineers";
@@ -277,5 +277,10 @@ span{
     .home-img img{
         width: 70vw;
         margin-top: 4rem;
+    }
+}
+@media (max-width: 558px){
+    .typing-text{
+        font-size: 18px !important;
     }
 }
