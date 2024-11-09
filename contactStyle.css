@@ -1,6 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 *{
-            
+    margin:0;
+    padding: 0;        
             
     box-sizing: border-box;
     text-decoration: none;
@@ -8,9 +9,12 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    font-size: 62.5%;
+}
 .logo{
     
-    font-size: 1.875rem;
+    font-size: 30px;
    
     color: #b74b4b;
     font-weight: 800;
@@ -24,9 +28,9 @@
 
 nav a{
     
-    font-size: 1.125rem;
+    font-size: 18px;
     color: white;
-    margin-left: 4rem;
+    margin-left: 40px;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
@@ -43,19 +47,20 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
+    padding: 10px 9%;
     background-color: transparent;
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    font-size: 62.5%;
+    
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    font-size: 1.2rem;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -68,6 +73,7 @@ body {
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* Internet Explorer/Edge */
     user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+    overflow-y: scroll; 
 }
 .link{
     pointer-events: none; /* Disable pointer events */
