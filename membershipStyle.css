@@ -287,6 +287,15 @@ nav a.active{
     .content-box {
         width: calc(50% - 10px);
     }
+    /* .main-content{
+        width: calc(50% - 10px);
+    } */
+    .main-content h1{
+        font-size: 2rem;
+    }
+    .main-content h2{
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 500px) {
