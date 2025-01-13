@@ -1,33 +1,37 @@
+/* Importing Google Font 'Poppins' */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-*{
-    margin:0;
-    padding: 0;        
-            
+
+/* Universal Reset and Font Setup */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-html{
+
+/* Base font size for easier rem scaling */
+html {
     font-size: 62.5%;
 }
-.logo{
-    
+
+/* Logo styling */
+.logo {
     font-size: 30px;
-   
     color: #b74b4b;
     font-weight: 800;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-nav a{
-    
+/* Navigation link styling */
+nav a {
     font-size: 18px;
     color: white;
     margin-left: 40px;
@@ -37,11 +41,13 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
-header{
+
+/* Header styling */
+header {
     margin-top: 20px;
     position: fixed;
     top: 0;
@@ -49,17 +55,15 @@ header{
     width: 100%;
     padding: 10px 9%;
     background-color: transparent;
-    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
 }
 
+/* Body styling */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     font-size: 1.2rem;
     background-color: #000;
     color: #fff;
@@ -67,38 +71,43 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    perspective: 1000px;
-    overflow: hidden;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* Internet Explorer/Edge */
-    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+    perspective: 1000px; /* For 3D cube effect */
     overflow-y: scroll; 
+    user-select: none; /* Disable text selection */
 }
-.link{
-    pointer-events: none; /* Disable pointer events */
-    color: #555; /* Optional: Change link color to indicate it's disabled */
-    text-decoration: none; /* Optional: Remove underline */
+
+/* Disable link interactions */
+.link {
+    pointer-events: none;
+    color: #555;
+    text-decoration: none;
 }
+
+/* Main content layout */
 .main-content {
-    margin-top: 80px; /* Adjust based on header height */
+    margin-top: 80px; /* Adjust for header height */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* 3D Cube container styling */
 .cube {
     position: relative;
-    width: 70vw; /* Base size for the cube */
-    height: 70vw; /* Maintain aspect ratio */
-    max-width: 400px; /* Maximum width for large screens */
-    max-height: 400px; /* Maximum height for large screens */
+    width: 70vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 400px;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg);
     transition: transform 1s;
 }
+
 .cube:hover {
     transform: rotateX(2deg) rotateY(2deg);
 }
+
+/* Cube face styling */
 .face {
     position: absolute;
     width: 100%;
@@ -112,28 +121,18 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    box-sizing: border-box;
     font-size: 1em;
-    
 }
-.face:nth-child(1) {
-    transform: rotateY(0deg) translateZ(calc(35vw));
-}
-.face:nth-child(2) {
-    transform: rotateY(90deg) translateZ(calc(35vw));
-}
-.face:nth-child(3) {
-    transform: rotateY(180deg) translateZ(calc(35vw));
-}
-.face:nth-child(4) {
-    transform: rotateY(-90deg) translateZ(calc(35vw));
-}
-.face:nth-child(5) {
-    transform: rotateX(90deg) translateZ(calc(35vw));
-}
-.face:nth-child(6) {
-    transform: rotateX(-90deg) translateZ(calc(35vw));
-}
+
+/* Positioning cube faces */
+.face:nth-child(1) { transform: rotateY(0deg) translateZ(calc(35vw)); }
+.face:nth-child(2) { transform: rotateY(90deg) translateZ(calc(35vw)); }
+.face:nth-child(3) { transform: rotateY(180deg) translateZ(calc(35vw)); }
+.face:nth-child(4) { transform: rotateY(-90deg) translateZ(calc(35vw)); }
+.face:nth-child(5) { transform: rotateX(90deg) translateZ(calc(35vw)); }
+.face:nth-child(6) { transform: rotateX(-90deg) translateZ(calc(35vw)); }
+
+/* Contact information styling */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -141,81 +140,60 @@ body {
     align-items: center;
     text-align: center;
 }
+
 .contact-info h1 {
     color: #b74b4b;
     margin: 0 0 10px;
-    font-size: 1.5em; /* Heading size */
+    font-size: 1.5em;
 }
+
 .contact-info p {
     margin: 5px 0;
-    font-size: 1em; /* Paragraph size */
+    font-size: 1em;
 }
+
 .contact-info a {
     color: #b74b4b;
     text-decoration: none;
 }
+
+/* Text box styling */
 .text-box {
-    width: 80vw; /* Default size for small screens */
-    max-width: 400px; /* Maximum width for larger screens */
+    width: 80vw;
+    max-width: 400px;
     background-color: #222;
     border: 1px solid #b74b4b;
     color: #fff;
     padding: 15px;
-    box-sizing: border-box;
     text-align: center;
-    margin-top: 20px; /* Space from the cube */
-    margin-bottom: 20px; /* Space from the bottom of the page */
-    z-index: 4;
+    margin: 20px 0;
 }
+
+/* Responsive design */
 @media (max-width: 600px) {
     .cube {
-        width: 90vw; /* Adjust width for smaller screens */
-        height: 90vw; /* Adjust height for smaller screens */
+        width: 90vw;
+        height: 90vw;
         margin-top: 100px;
     }
-    .contact-info h1 {
-        font-size: 0.95em; /* Smaller heading on mobile */
-    }
-    .contact-info p {
-        font-size: 0.65em; /* Smaller paragraph text on mobile */
-    }
+    .contact-info h1 { font-size: 0.95em; }
+    .contact-info p { font-size: 0.65em; }
     .text-box {
-        width: 90vw; /* Adjust width for smaller screens */
+        width: 90vw;
         margin-top: 400px;
-    }
-}
-@media (min-width: 601px) {
-    .cube {
-        width: 90vw; /* Adjust width for smaller screens */
-        height: 90vw; /* Adjust height for smaller screens */
-        margin-top: 100px;
-    }
-    .contact-info h1 {
-        font-size: 1.05em; /* Smaller heading on mobile */
-    }
-    .contact-info p {
-        font-size: 0.75em; /* Smaller paragraph text on mobile */
-    }
-    .text-box {
-        width: 90vw; /* Adjust width for smaller screens */
-        margin-top: 425px;
     }
 }
 
 @media (min-width: 1024px) {
     .cube {
-        width: 60vw; /* Adjust width for larger screens */
-        height: 60vw; /* Adjust height for larger screens */
+        width: 60vw;
+        height: 60vw;
         margin-top: 100px;
     }
-    .contact-info h1 {
-        font-size: 1.15em; /* Smaller heading on mobile */
-    }
-    .contact-info p {
-        font-size: 0.85em; /* Smaller paragraph text on mobile */
-    }
+    .contact-info h1 { font-size: 1.15em; }
+    .contact-info p { font-size: 0.85em; }
     .text-box {
-        width: 90vw; /* Adjust width for smaller screens */
+        width: 80vw;
         margin-top: 450px;
     }
 }
