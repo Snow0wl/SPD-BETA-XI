@@ -1,6 +1,8 @@
+/* Importing the Poppins font from Google Fonts with various weights */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-*{
-    
+
+/* Universal reset for padding, box-sizing, and text styling */
+* {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -8,10 +10,14 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-html{
+
+/* Setting base font size for easier rem calculations */
+html {
     font-size: 62.5%;
 }
-.logo{
+
+/* Logo styling with hover effect */
+.logo {
     font-size: 3rem;
     color: #b74b4b;
     font-weight: 800;
@@ -19,11 +25,12 @@ html{
     transition: 0.5s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-nav a{
+/* Navigation link styles with hover and active state */
+nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -33,12 +40,13 @@ nav a{
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
 
-header{
+/* Header styling with fixed positioning and drop shadow */
+header {
     margin-top: 20px;
     position: fixed;
     top: 0;
@@ -53,12 +61,14 @@ header{
     z-index: 100;
 }
 
+/* Body styling for a black background and scrollable content */
 body {
     background: black;
-    overflow-y: scroll; 
-  }
-  
-  .timeline {
+    overflow-y: scroll;
+}
+
+/* Timeline container styling with grid layout */
+.timeline {
     margin: 15px auto;
     max-width: 550px;
     padding: 25px;
@@ -66,131 +76,119 @@ body {
     grid-template-columns: 10fr 30px 10fr;
     font-family: "Fira Sans", sans-serif;
     color: #ffffff;
-    /* rotate: z -90deg; */
-    overflow-x: hidden; 
-  }
-  
-  .timeline__component {
-    margin: 20px 20px 20px 20px;
-    /* rotate: z 90deg; */
-  }
-  
-  .timeline__component--bg {
+    overflow-x: hidden;
+}
+
+/* Individual timeline component styling */
+.timeline__component {
+    margin: 20px;
+}
+
+/* Background style for timeline components */
+.timeline__component--bg {
     padding: 1.5em;
     background: #222;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-  }
-  
-  /* LEAVE TILL LAST */
-  .timeline__component--bottom {
-    margin-bottom: 0;
-  }
-  
-  .timeline__middle {
+}
+
+/* Timeline middle line styling */
+.timeline__middle {
     position: relative;
     background: #b74b4b;
-  }
-  
-  /* .timeline__point {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 15px;
-    background: #ffffff;
-    border-radius: 50%;
-  } */
-  
-  /* LEAVE TILL LAST */
-  .timeline__point--bottom {
-    top: initial;
-    bottom: 0;
-  }
-  
-  .timeline__date--right {
+}
+
+/* Right-aligned date styling in the timeline */
+.timeline__date--right {
     text-align: right;
-  }
-  
-  .timeline__title {
+}
+
+/* Timeline title styling */
+.timeline__title {
     margin: 0;
     font-size: 1.15em;
     font-weight: bold;
-  }
-  
-  .timeline__paragraph {
-    line-height: 1.5;
-  }
-  .scrolling-wrapper {
-    display: flex;
-    flex-wrap: nowrap;         /* Prevents wrapping */
-    overflow-x: auto;          /* Enables horizontal scrolling */
-    gap: 10px;                 /* Optional: Adds space between items */
-    padding: 10px;             /* Optional: Adds padding around the container */
 }
+
+/* Paragraph styling within the timeline */
+.timeline__paragraph {
+    line-height: 1.5;
+}
+
+/* Scrolling container for horizontal scrolling content */
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 10px;        /* Adds space between items */
+    padding: 10px;    /* Adds padding around the container */
+}
+
+/* Leadership section styling */
 .leadership {
-  width: 100%;
-  background-color: #333;
-  padding: 30px;
-  text-align: center;
+    width: 100%;
+    background-color: #333;
+    padding: 30px;
+    text-align: center;
 }
 
 .leadership h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.leadership img {
-  width: 100%;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
+.leadership img {
+    width: 100%;
+}
+
+/* Individual leader styling */
 .leader {
-  display: inline-block;
-  text-align: center;
-  margin: 0 20px;
-  padding: 10px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    padding: 10px;
 }
 
 .leader img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #b74b4b;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #b74b4b;
 }
 
 .leader p {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #ddd;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ddd;
 }
 
 .leader .name {
-  font-weight: bold;
-  color: #fff;
+    font-weight: bold;
+    color: #fff;
 }
 
 .leader .position {
-  color: #b7b7b7;
+    color: #b7b7b7;
 }
+
+/* Title container and styling */
 .title-container {
-  text-align: center;
-  margin-top: 80px;
+    text-align: center;
+    margin-top: 80px;
 }
 
-/* Style the title */
 .title {
-  font-size: 4em;
-  font-weight: bold;
-  margin: 0;
-  color: #b7b7b7;
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+    color: #b7b7b7;
 }
 
-/* Style the underline */
 .underline {
-  height: 20px; /* Thickness of the line */
-  width: 500px; /* Width of the underline */
-  background-color: #b74b4b; /* Color of the line */
-  margin: 10px auto 0;
-  border-radius: 2px; /* Optional for rounded edges */
+    height: 20px;         /* Thickness of the line */
+    width: 500px;         /* Width of the underline */
+    background-color: #b74b4b; /* Line color */
+    margin: 10px auto 0;
+    border-radius: 2px;   /* Rounded edges */
 }

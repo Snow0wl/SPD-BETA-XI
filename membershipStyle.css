@@ -1,341 +1,240 @@
+/* Importing Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-*{
+/* General Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Ensures consistent box model */
+    text-decoration: none; /* Removes text underline */
+    border: none; /* Removes default border styling */
+    outline: none; /* Removes focus outlines */
+    font-family: 'Poppins', sans-serif; /* Sets default font */
 }
 
-html{
-    font-size: 62.5%;
+html {
+    font-size: 62.5%; /* Sets 1rem = 10px for easier calculations */
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
     background-color: black;
     color: white;
-    overflow-y: scroll;
+    overflow-y: scroll; /* Allows vertical scrolling */
 }
 
-header{
+/* Header Section */
+header {
     margin-top: 20px;
-    position: fixed;
+    position: fixed; /* Sticks header to the top */
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 9%;
+    padding: 10px 9%; /* Adds spacing inside the header */
     background-color: transparent;
-    filter: drop-shadow(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    filter: drop-shadow(10px); /* Adds a shadow effect */
+    display: flex; /* Enables flex layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Centers content vertically */
+    z-index: 100; /* Places header above other elements */
 }
 
-.logo{
-    font-size: 3rem;
-    color: #b74b4b;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
+/* Logo Styles */
+.logo {
+    font-size: 3rem; /* Large font for the logo */
+    color: #b74b4b; /* Primary accent color */
+    font-weight: 800; /* Bold text */
+    cursor: pointer; /* Indicates clickable element */
+    transition: 0.5s ease; /* Smooth scaling effect */
 }
 
-.logo:hover{
-    transform: scale(1.1);
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo on hover */
 }
 
-nav a{
-    font-size: 1.8rem;
+/* Navigation Links */
+nav a {
+    font-size: 1.8rem; /* Adjust font size */
     color: white;
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    margin-left: 4rem; /* Spacing between links */
+    font-weight: 500; /* Medium weight for better readability */
+    transition: 0.3s ease; /* Smooth hover transition */
+    border-bottom: 3px solid transparent; /* Underline effect */
 }
 
-nav a:hover,
-nav a.active{
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+nav a:hover, nav a.active {
+    color: #b74b4b; /* Changes color on hover or active */
+    border-bottom: 3px solid #b74b4b; /* Highlights active link */
 }
+
+/* Main Content */
 .main-content {
-        margin-top: 80px; /* Adjust based on header height */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .main-content h1{
-        font-size: 100px;
-    }
-    .main-content h2{
-        font-size: 30px;
-        background-color: #b74b4b; /* Change to your desired highlight color */
-        padding: 10px 20px; /* Adjust padding for oval shape */
-        border-radius: 50px; /* Large radius to create an oval effect */
-        display: inline-block; /* Ensures the highlight fits closely around the text */
-    }
-    
-    
-  
-    
-  
-    
-  
-    
-   
+    margin-top: 80px; /* Ensures content doesn't overlap header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    /* Content Section Styling */
+.main-content h1 {
+    font-size: 100px; /* Large title font size */
+}
+
+.main-content h2 {
+    font-size: 30px;
+    background-color: #b74b4b; /* Highlight color */
+    padding: 10px 20px; /* Oval-shaped padding */
+    border-radius: 50px; /* Creates oval effect */
+    display: inline-block; /* Keeps highlight tight around text */
+}
+
+/* Content Section */
 .content-section {
     width: 100%;
-    padding: 60px 5%;
-    background-color: #222;
+    padding: 60px 5%; /* Adds spacing */
+    background-color: #222; /* Dark background for contrast */
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    text-align: center;
+    justify-content: center; /* Centers content */
+    gap: 30px; /* Space between items */
+    flex-wrap: wrap; /* Wraps items on smaller screens */
+    text-align: center; /* Centers text */
 }
 
-/* Content Box Styling */
+/* Content Box Styles */
 .content-box {
-    background-color: #333;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 30px;
-    width: calc(33.33% - 20px);
-    max-width: 300px;
-    color: #fff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #333; /* Slightly lighter background */
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 30px; /* Inner spacing */
+    width: calc(33.33% - 20px); /* Responsive width */
+    max-width: 300px; /* Maximum width */
+    color: #fff; /* Text color */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
-
-.content-box-long {
-    background-color: #333;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 30px;
-    width: calc(50.33% - 20px);
-    max-width: 1400px;
-    color: #fff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.content-box-invisible-tall {
-    
-    border-radius: 8px;
-    padding: 30px;
-    width: calc(33.33% - 20px);
-    max-width: 300px;
-    color: #fff;
-    min-height: 450px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.content-box-invisible-short {
-    
-    border-radius: 8px;
-    padding: 30px;
-    width: calc(33.33% - 20px);
-    max-width: 300px;
-    color: #fff;
-    min-height: 50px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* table tr td {
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
-  } */
 
 .content-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-.content-box-long:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Lifts on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Increases shadow on hover */
 }
 
-/* Icon Styling */
-.icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #b74b4b;
-}
-
-/* Title Styling */
-.content-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-/* Description Styling */
-.content-box p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-.container {
-    display: flex;
-    width: 100%;
-    /* max-width: 1200px; */
-    padding: 40px;
-    background-color: #222;
-    border-bottom: 2px solid #b74b4b;
-  }
-
-  .section {
-    flex: 1;
-    width: 100%;
-    background-color: #333;
-    padding: 30px;
-    text-align: center;
-  }
-
-  .section img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid #b74b4b;
-  }
-
-  .section h1 {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #fff;
-  }
-
-  .section p {
-    font-size: 1.1em;
-    line-height: 1.5;
-    color: #ddd;
-  }
-
-  .section:not(:last-child) {
-    border-right: 2px solid #b74b4b;
-  }
-
-  .leadership {
-    width: 100%;
-    background-color: #b74b4b;
-    padding: 30px;
-    text-align: center;
-  }
-
-  .leadership h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-
-  .leader {
+/* Buttons */
+.btn {
     display: inline-block;
-    text-align: center;
-    margin: 0 20px;
-    padding: 10px;
-  }
-
-  .leader img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid #b74b4b;
-  }
-
-  .leader p {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #ddd;
-  }
-
-  .leader .name {
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .leader .position {
-    color: #b7b7b7;
-  }
-  .btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1rem 2.8rem; /* Adds spacing inside button */
     background-color: black;
-    border-radius: 4rem;
+    border-radius: 4rem; /* Rounded button */
     font-size: 1.6rem;
-    color: #b74b4b;
-    letter-spacing: 0.3rem;
-    font-weight: 600;
-    border: 2px solid #b74b4b;
-    transition: 0.3s ease;
+    color: #b74b4b; /* Matches primary accent */
+    letter-spacing: 0.3rem; /* Adds space between letters */
+    font-weight: 600; /* Bold text */
+    border: 2px solid #b74b4b; /* Accent border */
+    transition: 0.3s ease; /* Smooth hover effects */
     cursor: pointer;
 }
 
-.btn:hover{
-    transform: scale3d(1.03);
-    background-color: #333;
-    color: #fff;
-    box-shadow: 0 0 25px #333;
+.btn:hover {
+    transform: scale3d(1.03); /* Enlarges slightly */
+    background-color: #333; /* Darkens background */
+    color: #fff; /* Changes text color */
+    box-shadow: 0 0 25px #333; /* Glow effect */
 }
 
 /* Responsive Design */
+/* Medium screens */
 @media (max-width: 768px) {
     .content-box {
-        width: calc(50% - 10px);
+        width: calc(50% - 10px); /* Adjusts for medium screens */
     }
-    /* .main-content{
-        width: calc(50% - 10px);
-    } */
-    .main-content h1{
-        font-size: 2rem;
+    .main-content h1 {
+        font-size: 2rem; /* Smaller title for medium screens */
     }
-    .main-content h2{
-        font-size: 2rem;
+    .main-content h2 {
+        font-size: 2rem; /* Adjusts subtitle size */
     }
 }
 
+/* Small screens */
 @media (max-width: 500px) {
     .content-box {
-        width: 100%;
+        width: 100%; /* Full width on small screens */
         max-width: 100%;
     }
 }
 
-@media(max-width:995px){
-    nav{
+/* Mobile Navigation */
+@media (max-width: 995px) {
+    nav {
         position: absolute;
-        display: none;
+        display: none; /* Hidden by default */
         top: 0;
         right: 0;
         width: 40%;
         border-left: 3px solid #b74b4b;
         border-bottom: 3px solid #b74b4b;
         border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        padding: 1rem;
+        background-color: #161616; /* Dark background */
     }
 
-    nav.active{
-        display: block;
+    nav.active {
+        display: block; /* Shows menu when active */
     }
 
-    nav a{
-        display: block;
+    nav a {
+        display: block; /* Stacks links vertically */
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 3rem 0; /* Adds space between links */
     }
 
-    nav a:hover,
-    nav a.active{
+    nav a:hover, nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #b74b4b;
     }
-    
-    
+}
+
+/* Leadership Section */
+.leadership {
+    width: 100%;
+    background-color: #b74b4b; /* Primary accent color for section */
+    padding: 30px; /* Spacing inside the section */
+    text-align: center; /* Centers all content */
+}
+
+.leadership h2 {
+    font-size: 1.8em; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #fff; /* White text for contrast */
+}
+
+/* Individual Leader */
+.leader {
+    display: inline-block; /* Allows multiple leaders in one line */
+    text-align: center; /* Centers each leader's content */
+    margin: 0 20px; /* Horizontal spacing between leaders */
+    padding: 10px; /* Inner spacing */
+}
+
+.leader img {
+    width: 80px; /* Fixed width for profile pictures */
+    height: 80px; /* Ensures square shape */
+    border-radius: 50%; /* Circular profile picture */
+    border: 2px solid #b74b4b; /* Accent border matching section */
+}
+
+.leader p {
+    margin-top: 10px; /* Spacing above text */
+    font-size: 0.9em; /* Smaller font size for details */
+    color: #ddd; /* Light gray for text */
+}
+
+.leader .name {
+    font-weight: bold; /* Emphasizes leader's name */
+    color: #fff; /* White text for readability */
+}
+
+.leader .position {
+    color: #b7b7b7; /* Lighter gray for the position */
 }
